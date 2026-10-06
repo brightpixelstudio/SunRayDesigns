@@ -6,13 +6,14 @@ import { Work } from '../models/work';
 import { Technology } from '../models/technology';
 import { Quote } from '../models/quote';
 import { Industry } from '../models/industry';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root', // Makes the service a global singleton
 })
 export class ApiService {
   private http = inject(HttpClient);
-  private apiUrl = 'https://localhost:7099/SunrayWork'; // LOCAL ONLY
+  private apiUrl = environment.apiUrl; // Uses the API URL from environment
 
   // GET request to fetch data
   getWork(worktypeid: number): Observable<Work[]> {
