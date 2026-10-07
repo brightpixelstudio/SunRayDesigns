@@ -11,7 +11,7 @@ import { environment } from '../../environments/environment';
 })
 export class ApiService {
   private http = inject(HttpClient);
-  private apiUrl = environment.apiUrl; // Uses the API URL from environment
+  private apiUrl = environment.apiUrl + '/SunrayBlog'; // Uses the API URL from environment
 
   // get ALL Blog information
   getBlogInformation(

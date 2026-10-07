@@ -13,7 +13,7 @@ import { environment } from '../../environments/environment';
 })
 export class ApiService {
   private http = inject(HttpClient);
-  private apiUrl = environment.apiUrl; // Uses the API URL from environment
+  private apiUrl = environment.apiUrl + '/SunrayWork'; // Uses the API URL from environment
 
   // GET request to fetch data
   getWork(worktypeid: number): Observable<Work[]> {
